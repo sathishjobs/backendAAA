@@ -1,0 +1,164 @@
+/* for bot chat */
+
+#bot {
+    height: 400px;
+}
+
+.fixed-bottom {
+    left: unset !important;
+    right: 20px;
+}
+
+footer .navbar-brand {
+    padding: 0px;
+    margin-right: 20px !important;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    border-radius: 5px;
+    z-index: 1051;
+}
+
+footer img {
+    height: 62px;
+    width: 62px;
+}
+
+footer .navbar {
+    margin-right: 70px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.bg-blue {
+    background: linear-gradient(to left, #243B55, #141E30);
+}
+
+.chatbot-wrap {
+    width: 400px;
+    z-index: 1051;
+}
+
+.wc-console {
+    border: 1px solid #dbdee1 !important;
+    border-radius: 0px 0px 25px 25px;
+    background-color: #fff;
+}
+
+.wc-message-from-bot svg.wc-message-callout, .wc-message-from-me svg.wc-message-callout {
+    display: none;
+}
+
+.wc-message-content {
+    padding: 7px 10px !important;
+}
+
+.wc-message-from-bot .wc-message-content {
+    border-radius: 7px !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.wc-message-from-me .wc-message-content {
+    border-radius: 7px !important;
+    background-color: #1f5796 !important;
+}
+
+.wc-console svg {
+    margin: 15px !important;
+}
+
+.wc-console svg:hover {
+    fill: rgb(94, 94, 105);
+}
+
+.wc-chatview-panel {
+    background-color: #fff;
+    border-radius: 5px 5px 25px 25px;
+}
+
+.wc-header {
+    background: white !important;
+    quotes: none !important;
+    color: #272626 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.wc-message-groups {
+    border: 1px solid #dbdee1;
+    background-color: rgb(235, 238, 245);
+}
+
+.wc-upload:focus {
+    outline: none;
+}
+
+.wc-send:focus {
+    outline: none;
+}
+
+.wc-message-wrapper {
+    margin-bottom: 5px !important;
+}
+
+.wc-hscroll>ul {
+    padding: 0;
+    white-space: normal !important;
+    /* margin-bottom: 0; */
+    margin: 2px 0px -7px -4px;
+}
+
+.wc-carousel .wc-hscroll>ul>li {
+    margin-bottom: 2%;
+}
+
+.topWrap>.row>.col-md-5 {
+    height: 86vh;
+}
+
+.scroll .next {
+    display: none !important;
+}
+
+.wc-message-groups {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.wc-card button {
+    color: #272626 !important;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 6px;
+    /* font-size: 1rem; */
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-color: rgb(206, 206, 206);
+}
+
+.wc-card button:hover {
+    background-color: transparent;
+    border-color: rgb(121, 116, 116);
+}
+
+.wc-console .wc-textbox {
+    /* bottom: 0; */
+    left: 30px;
+    /* right: 49px; */
+}
+
+.wc-carousel .wc-hscroll>ul {
+    width: 52vh;
+}
+
+/* end of bot chat styling */

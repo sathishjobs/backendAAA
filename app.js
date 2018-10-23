@@ -21,7 +21,7 @@
  * OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-'use strict';
+// 'use strict';
 
 /******************************************************************************
  * Module dependencies.
@@ -36,11 +36,11 @@ var passport = require('passport');
 var util = require('util');
 var bunyan = require('bunyan');
 var config = require('./config');
-
+var cors = require('cors');
 // set up database for express session
 var MongoStore = require('connect-mongo')(expressSession);
 var mongoose = require('mongoose');
-
+var path = require('path');
 // Start QuickStart here
 
 var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
@@ -48,6 +48,7 @@ var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var log = bunyan.createLogger({
     name: 'Microsoft OIDC Example Web Application'
 });
+
 
 /******************************************************************************
  * Set up passport in the app 
@@ -146,9 +147,10 @@ passport.use(new OIDCStrategy({
 // Config the app, include middlewares
 //-----------------------------------------------------------------------------
 var app = express();
+app.use(cors({ origin: '*' }));
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+// app.set('views', __dirname + '/views');
+// app.set('view engine', 'ejs');
 app.use(express.logger());
 app.use(methodOverride());
 app.use(cookieParser());
@@ -174,8 +176,8 @@ app.use(bodyParser.urlencoded({ extended : true }));
 // persistent login sessions (recommended).
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(app.router);
-app.use(express.static(__dirname + '/../../public'));
+// app.use(app.router);
+app.use(express.static(__dirname + '/public/'));
 
 //-----------------------------------------------------------------------------
 // Set up the route controller
@@ -192,19 +194,35 @@ function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
   res.redirect('/login');
 };
+// app.use("/",express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-  res.render('index', { user: req.user });
+  res.sendfile(path.join(__dirname + '/public/index.html'));
+  // return express.static(path.join(__dirname,'public'));
+  //  app.use(path.join(__dirname + '/public/index.htmll'));
+  // res.render(path.join(__dirname + '/public/index.html'));
+
+  // if(req.user)
+  //   res.redirect('http://localhost:8080?notfound=sat');
+  // else 
+  //   res.redirect('http://localhost:8080?founddude=sd');
+  // // res.render('index', { user: req.user });
 });
 
+
 // '/account' is only available to logged in user
-app.get('/account', ensureAuthenticated, function(req, res) {
-  res.render('account', { user: req.user });
+app.get('/account', function(req, res) {
+  if(!req.user){
+    return res.json({'user' : null})
+  } else {
+    return res.status(200).json({'user' : req.user});
+  }
+  // res.render('account', { user: req.user });
 });
 
 app.get('/login',
   function(req, res, next) {
-    passport.authenticate('azuread-openidconnect', 
+    let check =passport.authenticate('azuread-openidconnect', 
       { 
         response: res,                      // required
         resourceURL: config.resourceURL,    // optional. Provide a value if you want to specify the resource.
@@ -212,10 +230,12 @@ app.get('/login',
         failureRedirect: '/' 
       }
     )(req, res, next);
+    console.log("*****")
+    console.log(req.user);
   },
   function(req, res) {
     log.info('Login was called in the Sample');
-    res.redirect('/');
+    // res.redirect('http://localhost:8080/');
 });
 
 // 'GET returnURL'

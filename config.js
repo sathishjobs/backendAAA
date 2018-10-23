@@ -1,7 +1,7 @@
 
 exports.creds = {
   // Required
-  identityMetadata: 'https://login.microsoftonline.com/<tenant_name>.onmicrosoft.com/.well-known/openid-configuration',
+  identityMetadata: 'https://login.microsoftonline.com/cloudix01.onmicrosoft.com/.well-known/openid-configuration',
   // or equivalently: 'https://login.microsoftonline.com/<tenant_guid>/.well-known/openid-configuration'
   //
   // or you can use the common endpoint
@@ -9,7 +9,7 @@ exports.creds = {
   // To use the common endpoint, you have to either set `validateIssuer` to false, or provide the `issuer` value.
 
   // Required, the client ID of your app in AAD
-  clientID: '<your_client_id>',
+  clientID: 'f43c322b-cdd6-4fed-9425-621df2caed10',
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   responseType: 'code id_token',
@@ -25,10 +25,10 @@ exports.creds = {
 
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'.
   // If app key contains '\', replace it with '\\'.
-  clientSecret: '<your_client_secret>',
+  clientSecret: 'iEata75atxHvg4dnQeniZM7nKpj1vmFCOphKJnlFh/E=',
 
   // Required to set to false if you don't want to validate issuer
-  validateIssuer: true,
+  validateIssuer: false,
 
   // Required to set to true if you are using B2C endpoint
   // This sample is for v1 endpoint only, so we set it to false
@@ -54,7 +54,7 @@ exports.creds = {
   ],
 
   // Optional. The additional scope you want besides 'openid', for example: ['email', 'profile'].
-  scope: null,
+  scope: ['profile','role'],
 
   // Optional, 'error', 'warn' or 'info'
   loggingLevel: 'info',

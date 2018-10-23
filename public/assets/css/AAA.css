@@ -1,0 +1,67 @@
+/* Giant Eagle Css */
+
+/* login */
+
+.login-prompt {
+    background-color: #ffffff;
+    height: 100%;
+    padding: 22px 22px 15px 22px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-prompt>form>div>.form-check {
+    padding-bottom: 15px;
+}
+
+/* login ends */
+
+.Loader>.Loader__background {
+    display: block;
+    position: relative !important;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: none !important;
+    z-index: 10;
+}
+
+.btn-aaa {
+    background: linear-gradient(120deg, rgb(31, 87, 150), rgba(31, 87, 151, 0.8705882352941177));
+    color: white;
+    box-shadow: 0 12px 20px -10px rgba(117, 152, 191, 0.48), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(116, 151, 190, 0.34);
+}
+
+.btn-aaa:hover {
+    box-shadow: 0 12px 20px -10px rgba(117, 152, 191, 0.48), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(116, 151, 190, 0.34);
+}
+
+.formStylingLogin {
+    background-color: #f0f0f0;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+
+.card-block {
+    padding: 5px !important;
+}
+
+.text-aaa {
+    color: rgb(237, 29, 36) !important;
+}
+
+
+.react-bs-table-search-form>.form-control {
+    padding: 4px 10px;
+    font-size: 13px;
+}
+.fa:hover {
+    cursor: pointer;
+}

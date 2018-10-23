@@ -1,0 +1,63 @@
+{
+    "data": {
+      "user": {
+        "sub": "bEpYy0uWNw4OFnzh9ETHHYqRaOQCiJlQWo4NnQ9lVSk",
+        "oid": "a48efdd5-caf2-4474-9112-8ee83bd34afd",
+        "upn": "ganeshl@cloudix.io",
+        "displayName": "Lakshmipathy Ganesh",
+        "name": {
+          "familyName": "Ganesh",
+          "givenName": "Lakshmipathy"
+        },
+        "_raw": "{\"aud\":\"f43c322b-cdd6-4fed-9425-621df2caed10\",\"iss\":\"https://sts.windows.net/15c06421-f9b2-4764-8696-50765d1efbda/\",\"iat\":1540281030,\"nbf\":1540281030,\"exp\":1540284930,\"aio\":\"42RgYAirdVzKGd64LYq5ou39YqOfrrn5mULXlYOXct4rWf4pZzoA\",\"amr\":[\"pwd\"],\"family_name\":\"Ganesh\",\"given_name\":\"Lakshmipathy\",\"ipaddr\":\"49.207.182.62\",\"name\":\"Lakshmipathy Ganesh\",\"nonce\":\"l1-XsX357K9SLoHYnJNPUbJdkszNXgV4\",\"oid\":\"a48efdd5-caf2-4474-9112-8ee83bd34afd\",\"sub\":\"bEpYy0uWNw4OFnzh9ETHHYqRaOQCiJlQWo4NnQ9lVSk\",\"tid\":\"15c06421-f9b2-4764-8696-50765d1efbda\",\"unique_name\":\"ganeshl@cloudix.io\",\"upn\":\"ganeshl@cloudix.io\",\"uti\":\"0-p9n2MtH0yKP--SJSzvAA\",\"ver\":\"1.0\"}",
+        "_json": {
+          "aud": "f43c322b-cdd6-4fed-9425-621df2caed10",
+          "iss": "https://sts.windows.net/15c06421-f9b2-4764-8696-50765d1efbda/",
+          "iat": 1540281030,
+          "nbf": 1540281030,
+          "exp": 1540284930,
+          "aio": "42RgYAirdVzKGd64LYq5ou39YqOfrrn5mULXlYOXct4rWf4pZzoA",
+          "amr": [
+            "pwd"
+          ],
+          "family_name": "Ganesh",
+          "given_name": "Lakshmipathy",
+          "ipaddr": "49.207.182.62",
+          "name": "Lakshmipathy Ganesh",
+          "nonce": "l1-XsX357K9SLoHYnJNPUbJdkszNXgV4",
+          "oid": "a48efdd5-caf2-4474-9112-8ee83bd34afd",
+          "sub": "bEpYy0uWNw4OFnzh9ETHHYqRaOQCiJlQWo4NnQ9lVSk",
+          "tid": "15c06421-f9b2-4764-8696-50765d1efbda",
+          "unique_name": "ganeshl@cloudix.io",
+          "upn": "ganeshl@cloudix.io",
+          "uti": "0-p9n2MtH0yKP--SJSzvAA",
+          "ver": "1.0"
+        }
+      }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+      "access-control-allow-origin": "*",
+      "date": "Tue, 23 Oct 2018 07:56:06 GMT",
+      "etag": "W/\"72b-KvIDY3Dr7gworCx5xJCEkQ\"",
+      "connection": "keep-alive",
+      "x-powered-by": "Express",
+      "content-length": "1835",
+      "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+      "transformRequest": {},
+      "transformResponse": {},
+      "timeout": 0,
+      "xsrfCookieName": "XSRF-TOKEN",
+      "xsrfHeaderName": "X-XSRF-TOKEN",
+      "maxContentLength": -1,
+      "headers": {
+        "Accept": "application/json, text/plain, */*"
+      },
+      "method": "get",
+      "url": "http://localhost:3000/account"
+    },
+    "request": {}
+  }
